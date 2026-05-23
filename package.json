@@ -1,0 +1,21 @@
+{
+  "name": "html-streaming-test",
+  "description": "A demo of HTML streaming without JavaScript",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marchbox/html-streaming-test.git"
+  },
+  "keywords": [],
+  "author": "zacky@marchbox.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marchbox/html-streaming-test/issues"
+  },
+  "homepage": "https://github.com/marchbox/html-streaming-test#readme"
+}
