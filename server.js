@@ -17,7 +17,9 @@ const server = createServer(async (_, res) => {
     <html lang="en">
     <meta charset="utf-8">
     <title>HTML streaming test</title>
+    <script src="https://unpkg.com/template-for-polyfill"></script>
     <p>Hello…</p>
+    <p><?marker name="foo"></p>
   `);
 
   await wait(3000);
@@ -48,6 +50,22 @@ const server = createServer(async (_, res) => {
 
   res.write(`
     </div>
+  `);
+
+  await wait(3000);
+
+  res.write(`
+    <template for="foo">
+      This is <?marker name="foo">
+    </template>
+  `);
+
+  await wait(3000);
+
+  res.write(`
+    <template for="foo">
+      cool!
+    </template>
   `);
 
   await wait(3000);
